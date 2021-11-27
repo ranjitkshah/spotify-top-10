@@ -1,0 +1,36 @@
+.imagePrev {
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.exportC {
+  margin: 20px 20px;
+  height: 100%;
+  border: 2px solid red;
+  border-radius: 6px;
+  background: url(https://res.cloudinary.com/ranjitkshah/image/upload/v1637856930/spotifyTop5_nvzrhl.png);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 10px;
+}
+
+.header {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    font-weight: bold;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
