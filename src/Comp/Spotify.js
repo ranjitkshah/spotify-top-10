@@ -159,7 +159,6 @@ export default function Spotify() {
     <div>
       <br />
       <h2 style={{color: "white",}} >Your Top listening from Spotify</h2>
-      <br />
       <div className={styles.button}>
       <Button className={styles.button} onClick={handleSpotify} variant="contained">
         Connect Spotify
