@@ -1,10 +1,12 @@
-import './App.css';
-import Spotify from './Comp/Spotify';
+import "./App.css";
+import Spotify from "./Comp/Spotify";
 
 function App() {
   return (
     <div className="App">
-      <Spotify/>
+      <div className="spotify">
+        <Spotify />
+      </div>
     </div>
   );
 }

@@ -2,6 +2,9 @@ import Button from "@mui/material/Button";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import DownloadImage from "./DownloadImage";
+import styles from "./Download.module.css";
+import InfoIcon from '@mui/icons-material/Info';
+
 
 export default function Spotify() {
   const [token, setToken] = useState("");
@@ -66,7 +69,7 @@ export default function Spotify() {
     const res = await axios(config);
     if (res.data.items.length > 0) {
       const playlistId = res.data.items.find(
-        (item) => item.name === "tum bhi suno"
+        (item) => item.name === "mere gaane"
       );
       setPlaylistData(playlistId);
       return playlistId ? playlistId.id : null;
@@ -88,7 +91,7 @@ export default function Spotify() {
             "Content-Type": "application/json",
           },
           data: {
-            name: "tum bhi suno",
+            name: "mere gaane",
             description: "ye mere top gaane h",
             public: true,
           },
@@ -155,12 +158,16 @@ export default function Spotify() {
   return (
     <div>
       <br />
-      <h2>Check your top listening on Spotify</h2>
+      <h2 style={{color: "white",}} >Your Top listening from Spotify</h2>
       <br />
-
-      <Button onClick={handleSpotify} variant="contained">
+      <div className={styles.button}>
+      <Button className={styles.button} onClick={handleSpotify} variant="contained">
         Connect Spotify
       </Button>
+      <Button className={styles.button} variant="contained" endIcon={<InfoIcon />}>
+        info
+      </Button>
+      </div>
       {
         topTracks.length ?
         <DownloadImage topTracks={topTracks} playlistData={playlistData} /> : <></>  

@@ -1,8 +1,13 @@
 .App {
   text-align: center;
-  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  background-color: cornflowerblue;
     height: 100vh;
     width: 100vw;
 }
 
+.spotify {
+  width: 400px;
+}
 
