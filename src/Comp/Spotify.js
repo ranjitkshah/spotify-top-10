@@ -21,7 +21,7 @@ export default function Spotify() {
   }, [token]);
 
   const handleSpotify = () => {
-    window.location = `https://accounts.spotify.com/authorize?client_id=561d6c474d314908a0843348dd671cf2&response_type=code&redirect_uri=http://localhost:3000/spotifyconnect&scope=user-read-private%20user-top-read%20user-read-email%20playlist-modify-public%20playlist-modify-private`;
+    window.location = `https://accounts.spotify.com/authorize?client_id=561d6c474d314908a0843348dd671cf2&response_type=code&redirect_uri=https://spotify-top-10.vercel.app/&scope=user-read-private%20user-top-read%20user-read-email%20playlist-modify-public%20playlist-modify-private`;
   };
 
   //to get spotify user ID
@@ -130,7 +130,7 @@ export default function Spotify() {
       const body = {
         code: code,
         grant_type: "authorization_code",
-        redirect_uri: process.env.REACT_APP_REDIRECT_URI,
+        redirect_uri: 'https://spotify-top-10.vercel.app/',
       };
       const config = {
         url: "https://accounts.spotify.com/api/token",
